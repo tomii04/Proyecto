@@ -1,0 +1,375 @@
+/* ====== Reset Básico ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== Estilos Generales ====== */
+body {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  background-color: #fff5f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== Header Fijo ====== */
+.header-fixed {
+  background: linear-gradient(90deg, #f25730, #d34624);
+  color: white;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.header-fixed .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== Logo ====== */
+.logo {
+  height: 70px; /* un poco más grande */
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Menú ====== */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffe6d1;
+}
+
+/* ====== Contenedor ====== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* ====== Títulos ====== */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  color: #f25730;
+  font-weight: 700;
+}
+
+/* ====== Botones ====== */
+.boton, form button {
+  background: #f25730;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.boton:hover, form button:hover {
+  background: #d34624;
+  transform: translateY(-2px);
+}
+
+/* ====== Formularios ====== */
+form label {
+  display: block;
+  font-weight: bold;
+  margin: 8px 0 4px;
+  color: #f25730;
+}
+
+form input, form textarea, form select, form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ====== Tablas ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f25730;
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+tr:nth-child(even) {
+  background: #fff2ec;
+}
+
+/* ====== Pestañas (Tabs) ====== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tab {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background: #ffe5db;
+  cursor: pointer;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition: background 0.2s, font-weight 0.2s;
+}
+
+.tab:hover {
+  background: #ffd1b8;
+}
+
+.tab.active {
+  background: white;
+  font-weight: 600;
+  border-bottom: 2px solid white;
+}
+
+.panel {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 6px;
+  background: white;
+}
+
+/* ====== Mensajes ====== */
+.success {
+  background: #fff2e6;
+  border: 1px solid #f25730;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  color: #f25730;
+}
+
+.error {
+  background: #ffe6e6;
+  border: 1px solid #d34624;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  color: #d34624;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: #f25730;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ====== LOGIN estilo SeedProd con imagen derecha ====== */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.auth-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.auth-box h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f25730;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.auth-box input:focus {
+  border-color: #f25730;
+  box-shadow: 0 0 8px rgba(242,87,48,0.2);
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #f25730;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-box button:hover {
+  background: #d34624;
+}
+
+.auth-right {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-right img.login-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.auth-right::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 0;
+}
+
+/* ====== Hero principal ====== */
+.hero {
+  background: url('imagenes/fondo.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(242,87,48,0.5);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ====== Galería de proyectos ====== */
+.galeria .imagenes img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ====== Proyectos destacados ====== */
+.proyectos-destacados .grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ====== Grid ====== */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ====== Responsivo ====== */
+@media (max-width: 900px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-right {
+    flex: none;
+    width: 100%;
+    height: 300px;
+  }
+  .auth-left {
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .proyectos-destacados .grid img {
+    height: 150px;
+  }
+}
