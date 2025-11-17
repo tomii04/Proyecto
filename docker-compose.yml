@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  pdc3_app:
+    build: ./app
+    container_name: pdc3_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app/www:/var/www/html
+    depends_on:
+      - pdc3_db
+
+  pdc3_db:
+    image: mysql:8.0
+    container_name: pdc3_db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: CooperativaS
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  pdc3_backup:
+    build: ./backup
+    container_name: pdc3_backup
+    volumes:
+      - backups:/backups
+      - ./app:/app
+    depends_on:
+      - pdc3_db
+
+volumes:
+  mysql-data:
+  backups:
